@@ -18,13 +18,16 @@ def artist_style(user_query, chat_reply):
 
     template = """
     You are a creative writer and curator. In the {user_question} you will receive an artist name and it's style.
-    Learn from the style. 
+    Learn from the style. Find the adjectives.
     
     Ask: "Please type another word".
      
-    Think: Use what you have learned from the previous style as inspiration to re-imagine the new word that the user will input in {chat_reply}.
-    Find synonyms for the adjectives and use them instead. Don't refer to artist name in reply, or mention art, artwork, or realm. Create at least three phrases as prose.
-    
+    Think: Use what you have learned from the previous style as inspiration to describe the new word that the user will input in {chat_reply}.
+    Find synonyms for the adjectives and use them instead.
+    Don't refer to artist name in reply, or mention art, artwork, or realm.
+    Create at least two continuous phrases.
+    Just describe it from what you have learned.
+
     Begin!
     
     Chat reply: {chat_reply}
@@ -37,7 +40,7 @@ def artist_style(user_query, chat_reply):
 
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatOpenAI(temperature=0.6) #tweak imagination
+    llm = ChatOpenAI(temperature=0.4) #tweak imagination
         
     chain = prompt | llm | StrOutputParser()
     
