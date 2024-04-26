@@ -22,8 +22,8 @@ def artist_style(user_query, chat_reply):
     
     Ask: "Please type another word".
      
-    Think: Use what you have learned from the previous style as inspiration to explain the new word that the user will input in {chat_reply} in the same style.
-    Find synonyms for the adjectives and use them instead. Don't refer to artist name in reply, or mention art or artwork.
+    Think: Use what you have learned from the previous style as inspiration to re-imagine the new word that the user will input in {chat_reply}.
+    Find synonyms for the adjectives and use them instead. Don't refer to artist name in reply, or mention art, artwork, or realm. Create at least three phrases as prose.
     
     Begin!
     

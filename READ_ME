@@ -1,0 +1,17 @@
+Agent Implementation usign OpenAi API and Streamlit
+
+Use: Input an artist or collective and it's particular style. Then define a new word with the style of the artist.
+
+    install requirements.txt
+    run "streamlit run agent.py"
+
+(To restart the chat with a new artist kill the process in terminal and run streamlit again.)
+
+Insights:  
+
+In this proof-of-concept implementation I used LLMs and a prompt template. I used OpenAi chat as Langchain documentation on Agents recommends it. It's possible to use other LLMs, including local versions. A next step could be using tools such as search, or adding a csv file with specific data to aid the query replies, dependign on the purpose. The variable 'temperature='of the LLM varies how 'creative' the reply is, it varies greatly in the results. It would be helpul to control the chat memory, so it's not necessary to start over when you input another artists definition.
+
+(The Open AI API key is in an .env file. Didn't want it public on GitHub, but I can give it to you to test the program:))
+
+Thanks for reading.
+A
